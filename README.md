@@ -32,6 +32,7 @@ cd /var/www/html
 composer create-project drupal/recommended-project .
 composer require drush/drush
 drush si
+​sudo chown -R www-data:www-data web/sites/default/files/﻿
 ```
 Drush is provided using an alias in ~/.bash_aliases
 
