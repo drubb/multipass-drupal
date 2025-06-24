@@ -30,10 +30,14 @@ The project root is /var/www/html, you can install Drupal as usual using e.g. co
 ```shell
 cd /var/www/html
 composer create-project drupal/recommended-project .
-composer require drush/drush
+composer require drush/drushdrupal
 drush si
 ​sudo chown -R www-data:www-data web/sites/default/files/﻿
 ```
+You can also fully automate the installation by adding those lines at the bottom of cloud-init.yml
+and providing the required arguments to drush site-install, like this:
+`drush si --db-url=mysql://drupal:drupal@localhost:3306/dbname?module=mysql`
+
 Drush is provided using an alias in ~/.bash_aliases
 
 You can also use the web installer instead of Drush. To find the ip address of your instance,
