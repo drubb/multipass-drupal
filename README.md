@@ -30,7 +30,7 @@ The project root is /var/www/html, you can install Drupal as usual using e.g. co
 ```shell
 cd /var/www/html
 composer create-project drupal/recommended-project .
-composer require drush/drushdrupal
+composer require drush/drush
 drush si
 ​sudo chown -R www-data:www-data web/sites/default/files/﻿
 ```
